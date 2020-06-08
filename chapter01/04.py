@@ -1,16 +1,12 @@
-import re
-A = "Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nations Might Also Sign Peace Security Clause. Arthur King Can."
+num_first_only = (1, 5, 6, 7, 8, 9, 15, 16, 19)
+target = 'Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nations Might Also Sign Peace Security Clause. Arthur King Can.'
+result = {}
 
-B = re.split(", |\. |\.| ",A)
-B.pop()
-C={}
-
-for x, y in enumerate(B):
-    # print(x,y)
-    if x==0 or 4<=x<=9 or x==14 or x==15 or x==18:
-        C[y[0]]=x
+words = target.split(' ')
+for (num, word) in enumerate(words, 1):
+    if num in num_first_only:
+        result[word[0:1]] = num
     else:
-        C[y[0:2]]=x
+        result[word[0:2]] = num
 
-
-print(C)
+print(result)

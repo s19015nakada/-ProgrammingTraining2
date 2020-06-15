@@ -20,5 +20,3 @@ print('積集合' + str(set_and))
 set_sub = set_x - set_y
 print('差集合' + str(set_sub))
 
-print('seがXに含まれる:' + str('se' in set_x))
-print('seがYに含まれる:' + str('se' in set_y))

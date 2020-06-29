@@ -6,7 +6,8 @@ def cipher(target):
             result += chr(219 - ord(c))
         else:
             result += c
-            return result
+    return result
+
 
 target = input('文字列を入力してください--> ')
 
@@ -17,4 +18,4 @@ result2 = cipher(result)
 print('復号化:' + result2)
 
 if result2 != target:
-    print('もとに戻ってない')
+    print('元に戻っていない')
